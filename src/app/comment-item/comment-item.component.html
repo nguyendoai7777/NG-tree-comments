@@ -1,0 +1,36 @@
+<div class="d-flex align-items-start">
+  <div class="flex justify-content-center align-content-center">
+    <img
+      [src]="commentProps.backgroundImage"
+      class="circle-avatar"
+      alt=""
+      [ngClass]="hasSubComments? 'sub-avatar': 'normal-avatar'"
+      [style.margin-left]="hasSubComments? '4px': '0'"
+    />
+  </div>
+  <div class="ms-3 details">
+    <div class="comment-name">{{commentProps.username}} {{index ?? ''}}</div>
+    <div class="comment-content">{{commentProps.commentText}}</div>
+  </div>
+</div>
+<div class="d-flex">
+  <div style="width: 50px"></div>
+  <div class="ms-3 d-flex">
+    <div class="action">8h ago</div>
+    <div class="ms-4 action">like</div>
+    <div class="ms-4 action">comment</div>
+  </div>
+</div>
+<div
+  class="ps-5"
+  *ngIf="commentProps.subComments"
+  [ngClass]="hasSubComments? 'of-sub-comments-box': 'sub-comments-box'"
+
+>
+  <div
+    *ngFor="let cm of commentProps.subComments; index as i"
+    [ngClass]="hasSubComments? 'of-sub-item-box': 'sub-item-box'"
+  >
+    <app-comment-item class="hex" [commentProps]="cm" [index]="i" [hasSubComments]="true"></app-comment-item>
+  </div>
+</div>

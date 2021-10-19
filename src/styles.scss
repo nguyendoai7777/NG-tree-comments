@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+$treeLineColor: #e7e7e7;
+app-comment-item:nth-of-type(1) {
+  padding-top: 0;
+}
+:host {
+  display: block;
+  padding-top: 10px;
+}
+.circle-avatar {
+  border-radius: 999999999999px;
+  overflow: hidden;
+}
+.normal-avatar {
+  width: 50px;
+  height: 50px;
+}
+.sub-avatar {
+  width: 30px;
+  height: 30px;
+}
+.details {
+  padding: 5px 15px;
+  border-radius: 999999999999px;
+  background-color: #e7e7e7;
+  .comment-name {
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .comment-content {
+    font-size: 11px;
+  }
+}
+.action {
+  font-size: 10px;
+}
+
+.sub-comments-box {
+  .sub-item-box {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      width: 25px;
+      top: -15px;
+      height: calc(100% + 30px);
+      display: block;
+      border-left: 2px solid $treeLineColor;
+      border-bottom: 2px solid $treeLineColor;
+      border-bottom-left-radius: 14px;
+    }
+    &:first-child:after {
+      content: "";
+      position: absolute;
+      left: -24px;
+      width: 25px;
+      top: -5px;
+      height: 20px;
+      display: block;
+      border-left: 2px solid $treeLineColor;
+      border-bottom: 2px solid $treeLineColor;
+      border-bottom-left-radius: 14px;
+    }
+    &:last-child:before {
+      display: none;
+    }
+  }
+}
+.of-sub-comments-box {
+  position: relative;
+  .of-sub-item-box {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -30px;
+      width: 30px;
+      top: -27px;
+      height: calc(100% + 43px);
+      display: block;
+      border-left: 2px solid $treeLineColor;
+      border-bottom: 2px solid $treeLineColor;
+      border-bottom-left-radius: 14px;
+    }
+    &:first-child:after {
+      content: "";
+      position: absolute;
+      left: -30px;
+      width: 30px;
+      top: -5px;
+      height: 20px;
+      display: block;
+      border-left: 2px solid $treeLineColor;
+      border-bottom: 2px solid $treeLineColor;
+      border-bottom-left-radius: 14px;
+    }
+    &:last-child:before {
+      display: none;
+    }
+  }
+}
