@@ -34,7 +34,6 @@ app-comment-item:nth-of-type(1) {
 .action {
   font-size: 10px;
 }
-
 .sub-comments-box {
   .sub-item-box {
     position: relative;
@@ -100,3 +99,44 @@ app-comment-item:nth-of-type(1) {
     }
   }
 }
+/* custom css scrollbar*/
+.cs-scrollbar::-webkit-scrollbar-track {
+  border-radius: 555px;
+}
+.cs-scrollbar::-webkit-scrollbar {
+  background: deepskyblue;
+  width: 10px;
+}
+.cs-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 555px;
+  width: 8px;
+  background-color: #727272;
+  &:hover {
+    background-color: #8c8c8c;
+  }
+}
+/*
+.cs-scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+!* background of the scrollbar except button or resizer *!
+
+.cs-scrollbar::-webkit-scrollbar-track:hover {
+  background-color: rgba(45, 77, 50, 0.87);
+}
+!* scrollbar itself *!
+.cs-scrollbar::-webkit-scrollbar-thumb {
+  background-color: deepskyblue;
+  border-radius: 16px;
+  width: 10px;
+  border: 5px solid #fff;
+}
+!*.cs-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #00caff;
+  border: 4px solid #ff0085;
+}*!
+!* set button(top and bottom of the scrollbar) *!
+.cs-scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+*/
