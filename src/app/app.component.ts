@@ -243,5 +243,7 @@ export class AppComponent {
         },
       ]
     },
-  ]
+  ];
+  constructor() {
+  }
 }

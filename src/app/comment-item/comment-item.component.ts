@@ -10,12 +10,9 @@ export class CommentItemComponent implements OnInit {
   @Input() commentProps!: CommentProps;
   @Input() index?: number;
   @Input() hasSubComments?: boolean;
-  @ViewChildren('.sub-item-box', { read: ElementRef }) listSubItemBox!: QueryList<ElementRef>;
   constructor() {
   }
   ngOnInit(): void {
   }
-  ngAfterViewInit(): void {
-    console.log(this.listSubItemBox)
-  }
+
 }
