@@ -25,6 +25,7 @@ export class RxjsComponent implements OnInit {
     this.click$.subscribe(
       (next) => console.log(next)
     )*/
+    /*** notice: if merge has 3rd argument, use contact instead (with similar result) ***/
     merge(this.click$, this.interval$, 1).subscribe((next) => console.log(next))
   }
 }
