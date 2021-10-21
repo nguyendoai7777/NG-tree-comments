@@ -7,6 +7,12 @@ import { BehaviorSubjectComponent } from './rxjs/behavior-subject/behavior-subje
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { MergeInstanceComponent } from './rxjs/merge-instance/merge-instance.component';
 import { DebounceInputComponent } from './rxjs/debounce-input/debounce-input.component';
+import { HttpClientModule } from '@angular/common/http';
+import { Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'rxjs', component: RxjsComponent}
+]
 
 @NgModule({
   declarations: [
@@ -19,7 +25,8 @@ import { DebounceInputComponent } from './rxjs/debounce-input/debounce-input.com
     DebounceInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]
