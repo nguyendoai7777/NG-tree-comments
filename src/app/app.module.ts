@@ -6,6 +6,7 @@ import { CommentItemComponent } from './comment-item/comment-item.component';
 import { BehaviorSubjectComponent } from './rxjs/behavior-subject/behavior-subject.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { MergeInstanceComponent } from './rxjs/merge-instance/merge-instance.component';
+import { DebounceInputComponent } from './rxjs/debounce-input/debounce-input.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MergeInstanceComponent } from './rxjs/merge-instance/merge-instance.com
     CommentItemComponent,
     BehaviorSubjectComponent,
     RxjsComponent,
-    MergeInstanceComponent
+    MergeInstanceComponent,
+    DebounceInputComponent
   ],
   imports: [
     BrowserModule
